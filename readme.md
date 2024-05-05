@@ -26,7 +26,7 @@ Discover your new favorite anime on Munchy now! we offer a vast library of high-
 
 ### Watch Page
 
-![watch](https://media.discordapp.net/attachments/1136971472515108895/1236628848033136650/image.png?ex=6638b3dc&is=6637625c&hm=da806cc7a3d791193be848177fac91fc6ee4b76ab17fb1634b4ac7fcf549cfd2&=&format=webp&quality=lossless&width=687&height=367)
+![watch](https://media.discordapp.net/attachments/1136971472515108895/1236628848033136650/image.png?ex=6638b3dc&is=6637625c&hm=da806cc7a3d791193be848177fac91fc6ee4b76ab17fb1634b4ac7fcf549cfd2&=&format=webp&quality=lossless&width=1251&height=671)
 
 ## Self-Host
 
