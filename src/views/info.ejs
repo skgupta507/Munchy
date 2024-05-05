@@ -1,0 +1,52 @@
+<div class="space-y-2">
+    <div class="grid grid-cols-1 lg:grid-cols-[auto,1fr] gap-4">
+        <div class="hidden lg:flex flex-col items-center gap-2">
+            <img src="<%= data.cover %>" alt="<%= data.title %>" title="<%= data.title %>"
+                class="w-56 h-80 rounded-sm object-cover">
+            <% if (data.episodes.length> 0) { %>
+                <a href="/episode/<%= data.id %>/<%= data.episodes.reverse()[0].id %>"
+                    class="bg-violet-600 text-white w-full text-center rounded-sm py-1 hover:scale-95">Watch Now</a>
+                <% } %>
+        </div>
+        <div class="flex flex-col gap-2">
+            <div class="flex items-center gap-2">
+                <p class="text-white/75 text-base font-medium">
+                    <%= data.released %>
+                </p>
+                <i class="text-white font-black not-italic">•</i>
+                <p class="text-white/75 text-base font-medium">
+                    <%= data.status %>
+                </p>
+            </div>
+            <h2 class="text-white text-xl font-bold">
+                <%= data.title %>
+            </h2>
+            <div class="flex flex-wrap items-center gap-2">
+                <% data.genres.forEach(genre=> { %>
+                    <button type="button" class="bg-violet-600 text-white rounded-sm pt-0.5 pb-1 px-2">
+                        <%= genre %>
+                    </button>
+                    <% }) %>
+            </div>
+            <p class="text-white max-h-44 overflow-y-auto pr-4">
+                <%= data.synopsis %>
+            </p>
+        </div>
+    </div>
+    <div class="flex justify-start items-center">
+        <h2 class="text-white text-xl font-bold">Episodes List</h2>
+    </div>
+    <% if (data.episodes.length> 0) { %>
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-10 gap-2">
+            <% data.episodes.forEach(episode=> { %>
+                <a href="/episode/<%= data.id %>/<%= episode.id %>"
+                    class="bg-violet-600 text-white text-center rounded-sm py-1 px-2 hover:scale-95">
+                    EP <%= episode.episode %></a>
+                <% }) %>
+        </div>
+        <% } else { %>
+            <div class="flex justify-center items-center h-32">
+                <h2 class="text-white text-xl font-bold">No Episodes Yet</h2>
+            </div>
+            <% } %>
+</div>

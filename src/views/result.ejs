@@ -1,0 +1,33 @@
+<div class="space-y-8">
+    <form method="get" action="/search" class="flex justify-center items-center gap-2">
+        <input type="text" name="q" placeholder="Search..." class="bg-zinc-50 w-80 outline-none rounded-md py-2.5 px-4">
+        <button type="submit" class="bg-violet-600 text-white text-xl font-medium rounded-md py-2 px-3 hover:scale-95">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </form>
+    <div class="space-y-2">
+        <div class="flex justify-start items-center">
+            <h2 class="text-white text-xl font-bold">Search Result</h2>
+        </div>
+        <% if (data.length> 0) { %>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
+                <% data.forEach((i)=> { %>
+                    <a href="/info/<%= i.id %>" class="group space-y-1">
+                        <img src="<%= i.cover %>" alt="<%= i.title %>" title="<%= i.title %>"
+                            class="w-full h-52 rounded-sm object-cover group-hover:scale-95">
+                        <p class="text-white text-base font-medium truncate group-hover:text-violet-600">
+                            <%= i.title %>
+                        </p>
+                        <p class="text-white/50 text-sm font-medium">
+                            <%= i.released %>
+                        </p>
+                    </a>
+                    <% }) %>
+            </div>
+            <% } else { %>
+                <div class="flex justify-center items-center h-72">
+                    <h1 class="text-red-600 text-3xl font-bold">No Result Found</h1>
+                </div>
+                <% } %>
+    </div>
+</div>

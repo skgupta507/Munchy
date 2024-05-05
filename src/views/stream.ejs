@@ -1,0 +1,63 @@
+<div class="space-y-6">
+    <div class="flex flex-col gap-4">
+        <div class="flex flex-col justify-start">
+            <h2 class="text-white text-xl font-bold">
+                <%= data.episode.title %>
+            </h2>
+            <p class="text-white/75 text-base">Watching <%= data.episode.episode %>
+            </p>
+        </div>
+        <div class="flex justify-center items-center">
+            <iframe src="<%= data.plyr %>" frameborder="0" allowfullscreen
+                class="w-full md:w-full lg:w-[1000px] h-auto md:h-[400px] lg:h-[500px] rounded-sm"></iframe>
+        </div>
+    </div>
+    <div class="space-y-2">
+        <div class="grid grid-cols-1 lg:grid-cols-[auto,1fr] gap-4">
+            <div class="hidden lg:flex flex-col items-center gap-2">
+                <img src="<%= info.cover %>" alt="<%= info.title %>" title="<%= info.title %>"
+                    class="w-56 h-80 rounded-sm object-cover">
+            </div>
+            <div class="flex flex-col gap-2">
+                <div class="flex items-center gap-2">
+                    <p class="text-white/75 text-base font-medium">
+                        <%= info.released %>
+                    </p>
+                    <i class="text-white font-black not-italic">•</i>
+                    <p class="text-white/75 text-base font-medium">
+                        <%= info.status %>
+                    </p>
+                </div>
+                <h2 class="text-white text-xl font-bold">
+                    <%= info.title %>
+                </h2>
+                <div class="flex flex-wrap items-center gap-2">
+                    <% info.genres.forEach(genre=> { %>
+                        <button type="button" class="bg-violet-600 text-white rounded-sm pt-0.5 pb-1 px-2">
+                            <%= genre %>
+                        </button>
+                        <% }) %>
+                </div>
+                <p class="text-white max-h-44 overflow-y-auto pr-4">
+                    <%= info.synopsis %>
+                </p>
+            </div>
+        </div>
+        <div class="flex justify-start items-center">
+            <h2 class="text-white text-xl font-bold">Episodes List</h2>
+        </div>
+        <% if (info.episodes.length> 0) { %>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-10 gap-2">
+                <% info.episodes.reverse().forEach(episode=> { %>
+                    <a href="/episode/<%= info.id %>/<%= episode.id %>"
+                        class="bg-violet-600 text-white text-center rounded-sm py-1 px-2 hover:scale-95">
+                        EP <%= episode.episode %></a>
+                    <% }) %>
+            </div>
+            <% } else { %>
+                <div class="flex justify-center items-center h-32">
+                    <h2 class="text-white text-xl font-bold">No Episodes Yet</h2>
+                </div>
+                <% } %>
+    </div>
+</div>

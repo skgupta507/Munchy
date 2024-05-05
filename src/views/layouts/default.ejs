@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title><%= site.title %></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="<%= site.description %>">
+    <link rel="stylesheet" type="text/css"
+        href="data:text/css;base64,ICAgICogewogICAgICAgIHNjcm9sbC1iZWhhdmlvcjogc21vb3RoOwogICAgICAgIHRyYW5zaXRpb246IGFsbCAwLjJzIGVhc2U7CiAgICAgICAgZm9udC1mYW1pbHk6ICJPdXRmaXQiLCBzYW5zLXNlcmlmOwogICAgfQoKICAgIDo6LXdlYmtpdC1zY3JvbGxiYXIgewogICAgICAgIHdpZHRoOiA1cHg7CiAgICB9CgogICAgOjotd2Via2l0LXNjcm9sbGJhci10cmFjayB7CiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogdHJhbnNwYXJlbnQ7CiAgICB9CgogICAgOjotd2Via2l0LXNjcm9sbGJhci10aHVtYiB7CiAgICAgICAgYm9yZGVyLXJhZGl1czogMnB4OwogICAgICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigxMjQgNTggMjM3KTsKICAgIH0=">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="shortcut icon" href="https://files.catbox.moe/624vx2.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://files.catbox.moe/a8zhil.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://files.catbox.moe/bng69d.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://files.catbox.moe/1cni8y.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-zinc-900">
+    <%- include("../partials/header.ejs") %>
+        <div class="space-y-4 m-4">
+            <%- body %>
+        </div>
+        <%- include("../partials/footer.ejs") %>
+</body>
+
+</html>
