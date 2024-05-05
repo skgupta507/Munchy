@@ -12,12 +12,12 @@
         "axios": "^1.6.8",
         "cheerio": "^1.0.0-rc.12",
         "crypto-js": "^4.2.0",
-        "ejs": "^3.1.9",
+        "ejs": "^3.1.10",
         "express": "^4.19.2",
         "express-ejs-layouts": "^2.5.1",
         "i": "^0.3.7",
         "nodemon": "^3.1.0",
-        "npm": "^10.5.2"
+        "npm": "^10.7.0"
     },
     "author": "skgupta507",
     "license": "GPL-3.0"
